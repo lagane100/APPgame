@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/CameraSwitch.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/EnterMain.cs">
     <Files>
-      <File FileName="Assets/_Scripts/CameraSwitch.cs" Line="16" Column="23" />
-      <File FileName="../../../../Desktop/tanchiser/Assets/_Script/headmoving.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/CameraSwitch.cs" Line="15" Column="4" />
+      <File FileName="Assets/_Scripts/EnterMain.cs" Line="28" Column="1" />
+      <File FileName="Assets/_Scripts/GetSystemTime.cs" Line="10" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
