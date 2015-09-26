@@ -3,8 +3,8 @@ using System.Collections;
 using System;
 
 public class GetSystemTime : MonoBehaviour {
-	public TextMesh text;
-	
+	private TextMesh text;
+
 	// Update is called once per frame
 	void Update () {
 		text = (TextMesh)GetComponent ("TextMesh");
