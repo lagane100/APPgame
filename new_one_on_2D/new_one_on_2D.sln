@@ -1,19 +1,23 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-
+Project("{39E5E613-9D68-FA41-2DFC-625EC80C2B35}") = "new_one_on_2D", "Assembly-CSharp.csproj", "{8A65EF1D-A71F-0A33-979B-7762A412D02C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{8A65EF1D-A71F-0A33-979B-7762A412D02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A65EF1D-A71F-0A33-979B-7762A412D02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A65EF1D-A71F-0A33-979B-7762A412D02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A65EF1D-A71F-0A33-979B-7762A412D02C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
+			GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -32,4 +36,5 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
+
 EndGlobal
