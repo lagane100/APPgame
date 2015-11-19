@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class loadingScreen : MonoBehaviour {
+public class pass_scene_loading : MonoBehaviour {
 
 	public string levelToLoad;
 

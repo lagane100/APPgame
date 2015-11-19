@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class spining : MonoBehaviour {
+public class waiting_wheel_spining : MonoBehaviour {
 	public int rotateAngle;
 	// Use this for initialization
 	void Start () {
