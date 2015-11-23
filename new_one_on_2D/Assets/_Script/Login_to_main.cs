@@ -13,20 +13,17 @@ public class Login_to_main : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-#if UNITY_EDITOR_OSX || UNITY_STANDALONE
-		MouseInput();	//control by mouse
-#elif UNITY_ANDROID 
-		MobileInput(); //control by finger
-#endif
+//#if UNITY_EDITOR_OSX || UNITY_STANDALONE
+//		MouseInput();	//control by mouse
+//#elif UNITY_ANDROID 
+//		MobileInput(); //control by finger
+//#endif
 	}
-	void MouseInput(){
-		if (Input.GetKeyDown("space")) {
-
-		}
-	}
-
-	void MobileInput(){
-
-	}	
+//	void MouseInput(){
+//		if (Input.GetKeyDown("space")) {
+//		}
+//	}
+//	void MobileInput(){
+//	}	
 }
 
