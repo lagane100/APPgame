@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Script\Login_to_main.cs" />
+     <Compile Include="Assets\_Script\Server_connection.cs" />
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
      <Compile Include="Assets\_Script\login_text_shine.cs" />
