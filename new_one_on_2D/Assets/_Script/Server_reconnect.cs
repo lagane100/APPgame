@@ -22,7 +22,6 @@ public class Server_reconnect : MonoBehaviour {
 	IEnumerator reconnectToServer(string thing_to_send){
 		Text.SetActive (true);
 		OK.SetActive (true);
-
 		yield return 0;
 	}
 }
