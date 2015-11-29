@@ -7,45 +7,45 @@ using MiniJSON;
 public class Login_to_main : MonoBehaviour {
 
 	//private AndroidJavaObject TM = new AndroidJavaObject("android.telephony.TelephonyManager");
-
+	public string IMEI = "359279065155027";
 
 	// Start is called once per script
 	void Start(){
 		//string IMEI = TM.Call<string>("getDeviceId");
-		//string IMEI = "359279065155027";
 	}
 
 	// Update is called once per frame
 	void Update () {
 		MouseInput ();
-//#if UNITY_EDITOR_OSX || UNITY_STANDALONE
-//		MouseInput();	//control by mouse
-//#elif UNITY_ANDROID 
-//		MobileInput(); //control by finger
-//#endif
 	}
 	void MouseInput(){
 		if (Input.GetKeyDown("space")) {
-			StartCoroutine(login());
+			WWWForm form = new WWWForm();
+			form.AddField("IMEI", IMEI);
+			WWW test_connect = new WWW ("128.199.83.67/APPgame/backside/php/test.php",form);
+			StartCoroutine(login(test_connect));
 		}
 	}
-//	void MobileInput(){
-//	}
-	IEnumerator login(){
-		WWW test_connect = new WWW ("128.199.83.67/APPgame/backside/php/connect.php");
-		yield return test_connect;
 
+	//login coroutine
+	IEnumerator login(WWW test_connect){
+		yield return test_connect;
 		if (test_connect.error != null) {
 			print ("Connection_error by: " + test_connect.error);
+			yield break;
 		} else {
-			IDictionary jsonDictionary = (IDictionary)Json.Deserialize(test_connect.text);
-			print (1);
-			print (jsonDictionary);
-			IList jsonList = (IList) jsonDictionary["Objects"];
+			//var results = Json.Deserialize(test_connect.text) as Dictionary<string,object>;
 
-			foreach(IDictionary data in jsonList){
-				print(string.Format("data: {0} : {1}", data[1], data[2]));
-			}
+			IDictionary search = (IDictionary)Json.Deserialize(test_connect.text);
+			print (search["UID"]);
+			//IList tweets = (IList) search["results"];
+			//Debug.Log(search);
+			//Debug.Log(tweets);
+
+			//foreach (IDictionary tweet in tweets) {
+			//	Debug.Log(string.Format("tweet: {0} : {1}", tweet["0"], tweet["UID"]));
+			//}
+
 			yield break;
 		}
 	}
