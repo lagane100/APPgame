@@ -47,10 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\_Plugins\MiniJSON.cs" />
      <Compile Include="Assets\_Script\Login_to_main.cs" />
-     <Compile Include="Assets\_Script\Server_connection.cs" />
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
-     <Compile Include="Assets\_Script\login_text_shine.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
      <Compile Include="Assets\_Script\waiting_wheel_spining.cs" />
  <Reference Include="UnityEngine.UI">

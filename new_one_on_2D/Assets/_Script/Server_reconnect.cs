@@ -4,12 +4,11 @@ using System.Collections;
 public class Server_reconnect : MonoBehaviour {
 	private string things = "1234";
 
+	public Texture2D buttonImage;
 	public GameObject Text;
-	public GameObject OK;
 	// Use this for initialization
 	void Start () {
 		Text.SetActive (false);
-		OK.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -21,7 +20,12 @@ public class Server_reconnect : MonoBehaviour {
 
 	IEnumerator reconnectToServer(string thing_to_send){
 		Text.SetActive (true);
-		OK.SetActive (true);
 		yield return 0;
+	}
+
+	void OnGUI (){
+		if (GUI.Button (new Rect (100, 235, buttonImage.width/2, buttonImage.height/2), buttonImage)) {
+			//server reconnect
+		}
 	}
 }

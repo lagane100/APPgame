@@ -3,8 +3,6 @@ using System.Collections;
 
 public class pass_scene_loading : MonoBehaviour {
 
-	public string levelToLoad;
-
 	public GameObject background;
 	public GameObject loading_bar;
 	public GameObject text;
@@ -13,24 +11,11 @@ public class pass_scene_loading : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		background.SetActive (false);
-		loading_bar.SetActive (false);
-		text.SetActive (false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown ("space")) {
-			StartCoroutine(DisplayLoadingScreen(levelToLoad));
-		}
+		StartCoroutine(DisplayLoadingScreen(PlayerPrefs.GetString("nextlevel")));
 	}
 
 	// Display the loading screen while the scene is changing
-	IEnumerator DisplayLoadingScreen(string level){
-		background.SetActive (true);
-		loading_bar.SetActive (true);
-		text.SetActive (true);
-
+	public IEnumerator DisplayLoadingScreen(string level){
 		loading_bar.transform.localScale = new Vector3 (loadProgress, loading_bar.transform.position.y, loading_bar.transform.position.z);
 
 		TextMesh textObject = GameObject.Find ("text").GetComponent<TextMesh> ();
