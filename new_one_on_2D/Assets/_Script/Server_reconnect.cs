@@ -25,7 +25,6 @@ public class Server_reconnect : MonoBehaviour {
 
 	void OnGUI (){
 		if (GUI.Button (new Rect (100, 235, buttonImage.width/2, buttonImage.height/2), buttonImage)) {
-			//server reconnect
 		}
 	}
 }
