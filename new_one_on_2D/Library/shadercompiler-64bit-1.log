@@ -1,3 +1,47 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-2075828992
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=0 type=0 insize=577 outsize=1893 kw=SHADOWS_DEPTH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=577 outsize=6 kw=SHADOWS_DEPTH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=7165 outsize=3599 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=7165 outsize=6 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1274 outsize=8762 kw=SHADOWS_DEPTH GEOM_TYPE_BRANCH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1274 outsize=6 kw=SHADOWS_DEPTH GEOM_TYPE_BRANCH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=450584 outsize=9421 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF GEOM_TYPE_BRANCH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=450584 outsize=6 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF GEOM_TYPE_BRANCH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=287544 outsize=8542 kw=DIRECTIONAL GEOM_TYPE_BRANCH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=287544 outsize=6 kw=DIRECTIONAL GEOM_TYPE_BRANCH pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=938 outsize=564 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=938 outsize=6 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=932 outsize=559 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=932 outsize=6 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=932 outsize=559 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=932 outsize=6 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=938 outsize=564 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=938 outsize=6 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=920 outsize=549 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=920 outsize=6 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=932 outsize=559 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=932 outsize=6 kw= pd= ok=1

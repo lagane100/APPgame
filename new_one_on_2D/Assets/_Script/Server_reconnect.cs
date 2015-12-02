@@ -6,6 +6,7 @@ public class Server_reconnect : MonoBehaviour {
 
 	public Texture2D buttonImage;
 	public GameObject Text;
+	
 	// Use this for initialization
 	void Start () {
 		Text.SetActive (false);
@@ -25,6 +26,7 @@ public class Server_reconnect : MonoBehaviour {
 
 	void OnGUI (){
 		if (GUI.Button (new Rect (100, 235, buttonImage.width/2, buttonImage.height/2), buttonImage)) {
+			//Server_reconnect
 		}
 	}
 }
