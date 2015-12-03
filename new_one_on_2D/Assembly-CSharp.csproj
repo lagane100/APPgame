@@ -48,6 +48,7 @@
      <Compile Include="Assets\_Plugins\MiniJSON.cs" />
      <Compile Include="Assets\_Script\Camera_touchInput.cs" />
      <Compile Include="Assets\_Script\Login_to_main.cs" />
+     <Compile Include="Assets\_Script\Login_word_shining.cs" />
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
