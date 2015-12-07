@@ -54,12 +54,13 @@ public class Do_Text_Field : MonoBehaviour {
 	}
 
 	public IEnumerator start_change_scene_to_main(){
+		Instantiate (loading_prefab, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 		yield return register_data;
 		if (register_data.error != null) {
 			Debug.Log (register_data.error);
 		} else {
 			PlayerPrefs.SetString ("nextlevel", login_success_level);
-			Instantiate (loading_prefab, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
+			PlayerPrefs.SetInt("call_loading",1);
 			yield break;
 		}
 	}

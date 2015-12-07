@@ -6,7 +6,7 @@ using MiniJSON;
 
 public class Login_to_main : MonoBehaviour {
 
-	private string android_ID = "665c8c8937b9da30078e964ba84921";
+	private string android_ID;// = "665c8c8937b9da30078e964ba84921";
 	//private TextMesh show_android_ID;
 	private GameObject Error;
 	public string login_success_level;
@@ -34,7 +34,7 @@ public class Login_to_main : MonoBehaviour {
 	void Update(){
 		if (Input.GetMouseButtonDown(0)) {
 			WWWForm form = new WWWForm();
-			form.AddField("android_ID", android_ID);
+			form.AddField("android_ID", "665c8c8937b9da30078e964ba8492182");
 			WWW login_data = new WWW ("http://128.199.83.67/APPgame/backside/php/login.php",form);
 			StartCoroutine(login(login_data));
 		}
@@ -50,6 +50,7 @@ public class Login_to_main : MonoBehaviour {
 	}*/
 
 	void OnTouchDown(){
+		PlayerPrefs.DeleteAll ();
 		android_ID = (string)SystemInfo.deviceUniqueIdentifier;
 		PlayerPrefs.SetString ("android_ID", android_ID);
 		//show_android_ID.text = android_ID;
@@ -61,7 +62,7 @@ public class Login_to_main : MonoBehaviour {
 
 	//login coroutine
 	public IEnumerator login(WWW login_data){
-		Instantiate(loading_prefab,new Vector3(0.0f,0.0f,-13f),new Quaternion());
+		Instantiate(loading_prefab,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
 		yield return login_data;
 		//show_android_ID.text = login_data.error;
 		Debug.Log (login_data.text);
@@ -81,7 +82,21 @@ public class Login_to_main : MonoBehaviour {
 		}
 		else {
 			IDictionary<string,object> results = (IDictionary<string,object>)Json.Deserialize(login_data.text);
-			//PlayerPrefs.SetString("nickname", results["nickname"]);
+			WWWForm form = new WWWForm();
+			form.AddField("UID", int.Parse(results["UID"].ToString()));
+			WWW user_data = new WWW("http://128.199.83.67/APPgame/backside/php/getleveldata.php",form);
+			yield return user_data;
+			IDictionary<string,object> data = (IDictionary<string,object>)Json.Deserialize(user_data.text);
+			string nickname = results["nickname"].ToString();
+			string level = data["level"].ToString();
+			string exp = data["exp"].ToString();
+			string win = data["win"].ToString();
+			string lose = data["lose"].ToString();
+		 	PlayerPrefs.SetString("nickname", nickname);
+			PlayerPrefs.SetInt("level", int.Parse(level));
+			PlayerPrefs.SetInt("exp",int.Parse(exp));
+			PlayerPrefs.SetInt("win",int.Parse(win));
+			PlayerPrefs.SetInt("lose",int.Parse(lose));
 			/*IList tweets = (IList) search["results"];
 			 * 
 			foreach (IDictionary tweet in tweets) {
