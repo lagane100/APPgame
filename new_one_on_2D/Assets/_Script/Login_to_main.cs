@@ -6,7 +6,7 @@ using MiniJSON;
 
 public class Login_to_main : MonoBehaviour {
 
-	private string android_ID; //= "665c8c8937b9da30078e964ba84921";
+	private string android_ID = "665c8c8937b9da30078e964ba84921";
 	//private TextMesh show_android_ID;
 	private GameObject Error;
 	public string login_success_level;
@@ -31,14 +31,14 @@ public class Login_to_main : MonoBehaviour {
 		}
 	}*/
 
-	/*void Update(){
+	void Update(){
 		if (Input.GetMouseButtonDown(0)) {
 			WWWForm form = new WWWForm();
 			form.AddField("android_ID", android_ID);
 			WWW login_data = new WWW ("http://128.199.83.67/APPgame/backside/php/login.php",form);
 			StartCoroutine(login(login_data));
 		}
-	}*/
+	}
 
 	/*void MobileInput(){
 		if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended) {
@@ -61,12 +61,14 @@ public class Login_to_main : MonoBehaviour {
 
 	//login coroutine
 	public IEnumerator login(WWW login_data){
+		Instantiate(loading_prefab,new Vector3(0.0f,0.0f,-13f),new Quaternion());
 		yield return login_data;
 		//show_android_ID.text = login_data.error;
 		Debug.Log (login_data.text);
 		PlayerPrefs.SetString ("test",login_data.text);
 		if (login_data.error != null) {
 			Debug.Log ("Connection_error by: " + login_data.error);
+			Destroy(loading_prefab);
 			//Instantiate(error_prefab,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
 			//show_android_ID.text = login_data.error;
 			Error.SetActive(true);
@@ -74,7 +76,7 @@ public class Login_to_main : MonoBehaviour {
 		}
 		else if(login_data.text.Equals("need new account")){
 			PlayerPrefs.SetString("nextlevel",register_level);
-			Instantiate(loading_prefab,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
+			PlayerPrefs.SetInt("call_loading",1);
 			yield break;
 		}
 		else {
@@ -86,7 +88,7 @@ public class Login_to_main : MonoBehaviour {
 				Debug.Log(string.Format("tweet: {0} : {1}", tweet["0"], tweet["UID"]));
 			}*/
 			PlayerPrefs.SetString("nextlevel",login_success_level);
-			Instantiate(loading_prefab,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
+			PlayerPrefs.SetInt("call_loading",1);
 			yield break;
 		}
 	}

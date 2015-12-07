@@ -11,7 +11,15 @@ public class pass_scene_loading : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(DisplayLoadingScreen(PlayerPrefs.GetString("nextlevel")));
+
+	}
+
+	// Update is called once per frame
+	void Update(){
+		if (PlayerPrefs.GetInt ("call_loading") == 1) {
+			PlayerPrefs.SetInt("call_loading", 0);
+			StartCoroutine(DisplayLoadingScreen(PlayerPrefs.GetString("nextlevel")));
+		}
 	}
 
 	// Display the loading screen while the scene is changing
