@@ -7,10 +7,12 @@ public class Login_word_shining : MonoBehaviour {
 	private int timeCount = 0;
 	private bool isShow = false;
 	private GameObject Enter;
+//	private GameObject Error;
 
 	// Use this for initialization
 	void Start () {
 		Enter = GameObject.FindGameObjectWithTag ("press to continue");
+//		Error = GameObject.FindGameObjectWithTag ("Error");
 	}
 	
 	// Update is called once per frame
@@ -24,5 +26,6 @@ public class Login_word_shining : MonoBehaviour {
 			timeCount = timeCount - 120;
 		}
 		Enter.SetActive (isShow);
+//		Error.SetActive (isShow);
 	}
 }

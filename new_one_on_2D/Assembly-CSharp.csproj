@@ -47,20 +47,33 @@
   <ItemGroup>
      <Compile Include="Assets\_Plugins\MiniJSON.cs" />
      <Compile Include="Assets\_Script\Camera_touchInput.cs" />
+     <Compile Include="Assets\_Script\Do_Text_Field.cs" />
      <Compile Include="Assets\_Script\Login_to_main.cs" />
      <Compile Include="Assets\_Script\Login_word_shining.cs" />
+     <Compile Include="Assets\_Script\Main_get_level.cs" />
+     <Compile Include="Assets\_Script\Play_movie.cs" />
+     <Compile Include="Assets\_Script\Play_movie_renew.cs" />
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
+     <Compile Include="Assets\_Script\ask_nickname_script.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
+     <Compile Include="Assets\_Script\main_get_ID.cs" />
+     <Compile Include="Assets\_Script\main_get_exp.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
      <Compile Include="Assets\_Script\test.cs" />
      <Compile Include="Assets\_Script\waiting_wheel_spining.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\card_effect.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\dark_jewel.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

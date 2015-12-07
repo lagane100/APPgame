@@ -1,14 +1,32 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class test : MonoBehaviour {
+		
+	//private TextMesh text;
 
-	private TextMesh testing;
-
-	void Update(){
-		testing = GameObject.FindGameObjectWithTag("press to continue").GetComponent<TextMesh>();
+	// Start is called once per script
+	void Start(){
+		//text = GameObject.FindGameObjectWithTag ("press to continue").GetComponent<TextMesh> ();
 	}
+
+	// OnTouchDown method
 	void OnTouchDown(){
-		testing.text = "12345";
+
+	}
+
+	//OnTouchUp method
+	void OnTouchUp(){
+
+	}
+
+	//OnTouchStay method
+	void OnTouchStay(){
+
+	}
+
+	//OnTouchExit method
+	void OnTouchExit(){
+
 	}
 }

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 14d7e10f2180e4dfabd40985dfca602e
+timeCreated: 1449221641
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - movie: {fileID: 15200000, guid: 4c557299497384610bb451e44d8cf5c5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
