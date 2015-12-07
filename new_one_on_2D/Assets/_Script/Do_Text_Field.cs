@@ -31,6 +31,7 @@ public class Do_Text_Field : MonoBehaviour {
 	}
 
 	public IEnumerator register_new(string check_nick){
+		Instantiate (loading_prefab, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 		string temp = check_nick;
 		check_nick.Replace ("'", string.Empty);
 		check_nick.Replace ("<", string.Empty);
@@ -54,7 +55,6 @@ public class Do_Text_Field : MonoBehaviour {
 	}
 
 	public IEnumerator start_change_scene_to_main(){
-		Instantiate (loading_prefab, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 		yield return register_data;
 		if (register_data.error != null) {
 			Debug.Log (register_data.error);

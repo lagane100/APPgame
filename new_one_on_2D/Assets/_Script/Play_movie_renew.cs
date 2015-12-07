@@ -20,7 +20,7 @@ public class Play_movie_renew : MonoBehaviour {
 
 	// run the movie
 	IEnumerator movie_play(){
-		Handheld.PlayFullScreenMovie (path,Color.white,FullScreenMovieControlMode.Hidden,FullScreenMovieScalingMode.Fill);
+		Handheld.PlayFullScreenMovie (path,Color.white,FullScreenMovieControlMode.CancelOnInput,FullScreenMovieScalingMode.Fill);
 		yield return new WaitForEndOfFrame();
 		Destroy (gameObject);
 		GameObject.FindGameObjectWithTag ("ask for nickname").SetActive (true);

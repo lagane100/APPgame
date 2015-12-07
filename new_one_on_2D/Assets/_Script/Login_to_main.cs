@@ -63,6 +63,7 @@ public class Login_to_main : MonoBehaviour {
 	//login coroutine
 	public IEnumerator login(WWW login_data){
 		Instantiate(loading_prefab,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
+		Destroy(GameObject.FindGameObjectWithTag("press to continue"));
 		yield return login_data;
 		//show_android_ID.text = login_data.error;
 		Debug.Log (login_data.text);
