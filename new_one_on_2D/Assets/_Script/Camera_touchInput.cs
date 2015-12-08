@@ -5,23 +5,56 @@ using System.Collections.Generic;
 public class Camera_touchInput : MonoBehaviour {
 	public LayerMask touchInputMask;
 
+	private Camera c;
 	private List<GameObject> touchList = new List<GameObject>();
 	private GameObject[] touchsOld;
 
-	private Camera c;
+	RaycastHit hit;
 
 	//private TextMesh test;
 
 	// Start is called once per script
 	void Start(){
-		c = GetComponent<Camera> ();
+		c = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<Camera> ();
+		//test = GameObject.FindGameObjectWithTag("testTextMesh").GetComponent<TextMesh>();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		//test = GameObject.FindGameObjectWithTag("press to continue").GetComponent<TextMesh>();
-		//input.touchcount returns the number of the point is now touching
 
+#if UNITY_EDITOR
+		if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0)) {
+
+			touchsOld = new GameObject[touchList.Count];
+			touchList.CopyTo(touchsOld);
+			touchList.Clear();
+
+			Ray ray = c.ScreenPointToRay(Input.mousePosition);
+			if(Physics.Raycast(ray, out hit, touchInputMask)){
+
+				GameObject recipient = hit.transform.gameObject;
+				touchList.Add(recipient);
+
+				if(Input.GetMouseButtonDown(0)){
+					recipient.SendMessage("OnTouchDown",hit.point,SendMessageOptions.DontRequireReceiver);
+				//	test.text = "test";
+				}
+				if(Input.GetMouseButtonUp(0)){
+					recipient.SendMessage("OnTouchUp",hit.point,SendMessageOptions.DontRequireReceiver);
+				}
+				if(Input.GetMouseButton(0)){
+					recipient.SendMessage("OnTouchStay",hit.point,SendMessageOptions.DontRequireReceiver);
+				}
+			}
+			
+			foreach(GameObject g in touchsOld){
+				if(!touchList.Contains(g)){
+					g.SendMessage("OnTouchExit",hit.point,SendMessageOptions.DontRequireReceiver);
+				}
+			}
+		}
+#else
+		//input.touchcount returns the number of the point is now touching
 		if (Input.touchCount > 0) {
 			touchsOld = new GameObject[touchList.Count];
 			touchList.CopyTo(touchsOld);
@@ -29,7 +62,6 @@ public class Camera_touchInput : MonoBehaviour {
 
 			foreach(Touch t in Input.touches) {
 				Ray ray = c.ScreenPointToRay(t.position);
-				RaycastHit hit;
 
 				if(Physics.Raycast(ray,out hit,touchInputMask)){
 				
@@ -38,6 +70,7 @@ public class Camera_touchInput : MonoBehaviour {
 
 					if(t.phase == TouchPhase.Began){
 						recipient.SendMessage("OnTouchDown",hit.point,SendMessageOptions.DontRequireReceiver);
+					//	test.text = "test";
 					}
 					if(t.phase == TouchPhase.Ended){
 						recipient.SendMessage("OnTouchUp",hit.point,SendMessageOptions.DontRequireReceiver);
@@ -50,6 +83,13 @@ public class Camera_touchInput : MonoBehaviour {
 					}
 				}
 			}
+
+			foreach(GameObject g in touchsOld){
+				if(!touchList.Contains(g)){
+					g.SendMessage("OnTouchExit",hit.point,SendMessageOptions.DontRequireReceiver);
+				}
+			}
 		}
+#endif
 	}
 }

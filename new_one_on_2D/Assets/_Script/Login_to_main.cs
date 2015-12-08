@@ -31,14 +31,14 @@ public class Login_to_main : MonoBehaviour {
 		}
 	}*/
 
-	void Update(){
+	/*void Update(){
 		if (Input.GetMouseButtonDown(0)) {
 			WWWForm form = new WWWForm();
 			form.AddField("android_ID", "665c8c8937b9da30078e964ba8492182");
 			WWW login_data = new WWW ("http://128.199.83.67/APPgame/backside/php/login.php",form);
 			StartCoroutine(login(login_data));
 		}
-	}
+	}*/
 
 	/*void MobileInput(){
 		if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended) {
@@ -64,6 +64,7 @@ public class Login_to_main : MonoBehaviour {
 	public IEnumerator login(WWW login_data){
 		Instantiate(loading_prefab,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
 		Destroy(GameObject.FindGameObjectWithTag("press to continue"));
+		gameObject.GetComponent<Login_word_shining> ().enabled = false;
 		yield return login_data;
 		//show_android_ID.text = login_data.error;
 		Debug.Log (login_data.text);

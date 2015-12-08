@@ -26,7 +26,7 @@ public class pass_scene_loading : MonoBehaviour {
 	public IEnumerator DisplayLoadingScreen(string level){
 		loading_bar.transform.localScale = new Vector3 (loadProgress, loading_bar.transform.position.y, loading_bar.transform.position.z);
 
-		text.SetActive (false);
+		text.SetActive (true);
 		TextMesh textObject = GameObject.Find ("text").GetComponent<TextMesh> ();
 		textObject.text = "Now Loading " + loadProgress + "%";
 

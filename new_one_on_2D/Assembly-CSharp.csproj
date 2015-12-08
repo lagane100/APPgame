@@ -60,10 +60,10 @@
      <Compile Include="Assets\_Script\main_get_exp.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
      <Compile Include="Assets\_Script\test.cs" />
+     <Compile Include="Assets\_Script\victory.cs" />
      <Compile Include="Assets\_Script\waiting_wheel_spining.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\card_effect.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\dark_jewel.cs" />
-     <None Include="Assets\_Picture\戰鬥中出現的東西\戰鬥中發生的事\查看鎮手牌或陣營與職業readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
