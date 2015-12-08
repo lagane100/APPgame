@@ -30,6 +30,7 @@ public class Camera_touchInput : MonoBehaviour {
 			touchList.Clear();
 
 			Ray ray = c.ScreenPointToRay(Input.mousePosition);
+			Debug.Log (Physics.Raycast(ray,out hit,touchInputMask));
 			if(Physics.Raycast(ray, out hit, touchInputMask)){
 
 				GameObject recipient = hit.transform.gameObject;
@@ -37,7 +38,6 @@ public class Camera_touchInput : MonoBehaviour {
 
 				if(Input.GetMouseButtonDown(0)){
 					recipient.SendMessage("OnTouchDown",hit.point,SendMessageOptions.DontRequireReceiver);
-				//	test.text = "test";
 				}
 				if(Input.GetMouseButtonUp(0)){
 					recipient.SendMessage("OnTouchUp",hit.point,SendMessageOptions.DontRequireReceiver);
