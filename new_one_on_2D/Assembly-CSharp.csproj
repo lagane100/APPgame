@@ -56,7 +56,9 @@
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
      <Compile Include="Assets\_Script\ask_nickname_script.cs" />
      <Compile Include="Assets\_Script\attack.cs" />
+     <Compile Include="Assets\_Script\battle_start.cs" />
      <Compile Include="Assets\_Script\end.cs" />
+     <Compile Include="Assets\_Script\go_setting.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
      <Compile Include="Assets\_Script\main_get_ID.cs" />
      <Compile Include="Assets\_Script\main_get_exp.cs" />
@@ -76,9 +78,12 @@
      <Compile Include="Assets\_Script\weapon_scripts\golden_ring.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\knife.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\privilege.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\secret_bag_grail.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\secret_bag_key.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\sextent.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\single_glass.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\solo_declare_ring.cs" />
+     <None Include="Assets\_Picture\things_in_battle\查看鎮手牌或陣營與職業readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
