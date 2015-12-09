@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/trade.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/go_setting.cs">
     <Files>
       <File FileName="Assets/_Script/Camera_touchInput.cs" Line="33" Column="60" />
       <File FileName="Assets/_Script/victory.cs" Line="1" Column="1" />
       <File FileName="Assets/_Script/attack.cs" Line="1" Column="1" />
       <File FileName="Assets/_Script/trade.cs" Line="18" Column="91" />
+      <File FileName="Assets/_Script/go_setting.cs" Line="23" Column="76" />
+      <File FileName="Assets/_Script/Login_to_main.cs" Line="65" Column="76" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
