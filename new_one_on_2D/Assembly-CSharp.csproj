@@ -65,8 +65,20 @@
      <Compile Include="Assets\_Script\trade.cs" />
      <Compile Include="Assets\_Script\victory.cs" />
      <Compile Include="Assets\_Script\waiting_wheel_spining.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\broken_mirror.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\bullwhip.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\card_effect.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\coat.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\cutter.cs" />
      <Compile Include="Assets\_Script\weapon_scripts\dark_jewel.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\dictionary.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\glove.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\golden_ring.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\knife.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\privilege.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\sextent.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\single_glass.cs" />
+     <Compile Include="Assets\_Script\weapon_scripts\solo_declare_ring.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

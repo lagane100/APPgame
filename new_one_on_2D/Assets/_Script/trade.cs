@@ -12,4 +12,9 @@ public class trade : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	// start trading
+	void OnTouchDown(){
+		GameObject.FindGameObjectWithTag("testTextMesh").GetComponent<TextMesh>().text = "test";
+	}
 }
