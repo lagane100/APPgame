@@ -57,6 +57,7 @@
      <Compile Include="Assets\_Script\ask_nickname_script.cs" />
      <Compile Include="Assets\_Script\attack.cs" />
      <Compile Include="Assets\_Script\battle_start.cs" />
+     <Compile Include="Assets\_Script\eject_skin_turn.cs" />
      <Compile Include="Assets\_Script\end.cs" />
      <Compile Include="Assets\_Script\go_setting.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
