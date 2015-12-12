@@ -3,6 +3,8 @@ using System.Collections;
 
 public class trade : MonoBehaviour {
 
+	public GameObject select_player;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +17,6 @@ public class trade : MonoBehaviour {
 
 	// start trading
 	void OnTouchDown(){
-		GameObject.FindGameObjectWithTag("testTextMesh").GetComponent<TextMesh>().text = "test";
+		Instantiate (select_player, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 	}
 }
