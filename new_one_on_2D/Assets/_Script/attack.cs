@@ -3,6 +3,8 @@ using System.Collections;
 
 public class attack : MonoBehaviour {
 
+	public GameObject select_player;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,5 +17,6 @@ public class attack : MonoBehaviour {
 
 	void OnTouchDown(){
 		PlayerPrefs.SetInt ("have_dark_jewel", 0);
+		Instantiate (select_player, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 	}
 }

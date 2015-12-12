@@ -3,7 +3,7 @@ using System.Collections;
 
 public class send_all_select : MonoBehaviour {
 
-	private Color selected_color = new Color();
+	//private Color selected_color = new Color();
 	private Color origin_color = new Color();
 	private GameObject selected_player;
 
@@ -17,7 +17,7 @@ public class send_all_select : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ColorUtility.TryParseHtmlString ("#B2B6B6FF", out selected_color);
+	//	ColorUtility.TryParseHtmlString ("#B2B6B6FF", out selected_color);
 		ColorUtility.TryParseHtmlString ("#FFFFFFFF", out origin_color);
 	}
 	
