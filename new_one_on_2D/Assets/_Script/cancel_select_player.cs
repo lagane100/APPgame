@@ -14,7 +14,6 @@ public class cancel_select_player : MonoBehaviour {
 	}
 
 	void OnTouchDown(){
-		GameObject.FindGameObjectWithTag ("enter").SendMessage ("clearList",SendMessageOptions.DontRequireReceiver);
 		Destroy(GameObject.FindGameObjectWithTag("choseWho"));
 	}
 }

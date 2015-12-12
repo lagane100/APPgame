@@ -1,52 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class send_all_select : MonoBehaviour {
 
 	private Color selected_color = new Color();
-	private List<GameObject> player_stack = new List<GameObject>();
+	private Color origin_color = new Color();
+	private GameObject selected_player;
 
 	// Do when script starts
 	void Awake(){
 		while (GameObject.Find("nickname") != null) {
 			GameObject.Find ("nickname").GetComponent<MeshRenderer>().sortingOrder = 4;
-			GameObject.Find ("nickname").name = "test";
+			GameObject.Find ("nickname").name = "nicknameChanged";
 		}
 	}
 
 	// Use this for initialization
 	void Start () {
 		ColorUtility.TryParseHtmlString ("#B2B6B6FF", out selected_color);
+		ColorUtility.TryParseHtmlString ("#FFFFFFFF", out origin_color);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 	}
+	
+	//Test playerstack
+	void OnTouchUp(){
+		Debug.Log (selected_player);
+	}
 
-	// Send all selected player to server
-	void OnTouchDown(){
+	void CheckSelected(){
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player")) {
-			if(g.GetComponent<SpriteRenderer>().color == selected_color){
-				player_stack.Add(g);
-			}
-			else{
-				if(player_stack.Contains(g)){
-					player_stack.Remove(g);
+			if(selected_player != null){
+				if(g.name != selected_player.name){
+					g.GetComponent<SpriteRenderer>().color = origin_color;
 				}
 			}
 		}
 	}
 
-	//Test playerstack
-	void OnTouchUp(){
-		foreach (GameObject g in player_stack) {
-			Debug.Log(g.name);
-		}
+	void UpdateSelected(GameObject g){
+	/*	foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player")) {
+			if(g.GetComponent<SpriteRenderer>().color == selected_color){
+				selected_player = g;
+			}
+		}*/
+		selected_player = g;
 	}
 
-	void clearList(){
-		player_stack.Clear ();
+	void Clear(){
+		selected_player = null;
 	}
 }
