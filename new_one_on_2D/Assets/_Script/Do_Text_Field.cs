@@ -21,7 +21,7 @@ public class Do_Text_Field : MonoBehaviour {
 
 	// Set textfield GUI
 	void OnGUI(){
-		edit_to_enter = GUI.TextField (new Rect (Screen.width/4, Screen.height/2 - Screen.height/10, Screen.width/2,Screen.height/15), edit_to_enter, 40);
+		edit_to_enter = GUI.TextField (new Rect (Screen.width/4, Screen.height/2 - Screen.height/10, Screen.width/2,Screen.height/15), edit_to_enter, 20);
 		GUI.skin.textField.fontSize = 80;
 
 		if (GUI.Button (new Rect (Screen.width * 3 / 8, Screen.height / 2, Screen.width / 4, Screen.height / 16), edit_to_send)) {

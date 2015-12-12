@@ -3,12 +3,12 @@ using System.Collections;
 
 public class victory : MonoBehaviour {
 
-	private TextMesh t;
+	//private TextMesh t;
 	private Color change_color = new Color();
 
 	// Use this for initialization
 	void Start () {
-		t = GameObject.FindGameObjectWithTag ("testTextMesh").GetComponent<TextMesh> ();
+		//t = GameObject.FindGameObjectWithTag ("testTextMesh").GetComponent<TextMesh> ();
 	}
 	
 	// Update is called once per frame
@@ -23,7 +23,7 @@ public class victory : MonoBehaviour {
 	}
 
 	void OnTouchDown(){
-		t.text = "test";
+//		t.text = "test";
 		PlayerPrefs.SetInt ("have_dark_jewel", 1);
 	}
 }

@@ -54,6 +54,7 @@
      <Compile Include="Assets\_Script\Play_movie.cs" />
      <Compile Include="Assets\_Script\Play_movie_renew.cs" />
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
+     <Compile Include="Assets\_Script\accept_skip_turn.cs" />
      <Compile Include="Assets\_Script\ask_nickname_script.cs" />
      <Compile Include="Assets\_Script\attack.cs" />
      <Compile Include="Assets\_Script\battle_start.cs" />
@@ -64,6 +65,8 @@
      <Compile Include="Assets\_Script\main_get_ID.cs" />
      <Compile Include="Assets\_Script\main_get_exp.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
+     <Compile Include="Assets\_Script\playerselected.cs" />
+     <Compile Include="Assets\_Script\send_all_select.cs" />
      <Compile Include="Assets\_Script\test.cs" />
      <Compile Include="Assets\_Script\trade.cs" />
      <Compile Include="Assets\_Script\victory.cs" />

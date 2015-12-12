@@ -48,7 +48,7 @@ public class Camera_touchInput : MonoBehaviour {
 			}
 			
 			foreach(GameObject g in touchsOld){
-				if(!touchList.Contains(g)){
+				if(!touchList.Contains(g) && g){
 					g.SendMessage("OnTouchExit",hit.point,SendMessageOptions.DontRequireReceiver);
 				}
 			}
@@ -76,7 +76,7 @@ public class Camera_touchInput : MonoBehaviour {
 						recipient.SendMessage("OnTouchUp",hit.point,SendMessageOptions.DontRequireReceiver);
 					}
 					if(t.phase == TouchPhase.Stationary || t.phase == TouchPhase.Moved){
-						recipient.SendMessage("OnTouchStay",hit.point,SendMessageOptions.DontRequireReceiver);
+						StartCoroutine(onTouchStayFunction(hit, t, recipient));
 					}
 					if(t.phase == TouchPhase.Canceled){
 						recipient.SendMessage("OnTouchExit",hit.point,SendMessageOptions.DontRequireReceiver);
@@ -85,11 +85,17 @@ public class Camera_touchInput : MonoBehaviour {
 			}
 
 			foreach(GameObject g in touchsOld){
-				if(!touchList.Contains(g)){
+				if(!touchList.Contains(g) && g){
 					g.SendMessage("OnTouchExit",hit.point,SendMessageOptions.DontRequireReceiver);
 				}
 			}
 		}
 #endif
+	}
+	IEnumerator onTouchStayFunction(RaycastHit hit, Touch t, GameObject recipient){
+		yield return new WaitForSeconds (1);
+		if (t.phase == TouchPhase.Stationary || t.phase == TouchPhase.Moved) {
+			recipient.SendMessage("OnTouchStay",hit.point,SendMessageOptions.DontRequireReceiver);
+		}
 	}
 }
