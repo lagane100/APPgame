@@ -4,7 +4,7 @@ using System.Collections;
 public class Play_movie_renew : MonoBehaviour {
 
 	//private TextMesh t;
-	public string path;
+	private string path = "http://128.199.87.70/movie_retry2.mp4";
 
 	// Use this for initialization
 	void Start () {

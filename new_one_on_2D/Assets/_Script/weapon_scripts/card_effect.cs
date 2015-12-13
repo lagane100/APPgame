@@ -13,7 +13,7 @@ public class card_effect : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.localScale == biggest_scale) {
+		if (transform.localScale.x > biggest_scale.x) {
 			Counter++;
 		}
 		if (Counter == 0) {
@@ -22,8 +22,9 @@ public class card_effect : MonoBehaviour {
 		if (Counter == 1) {
 			transform.localScale -= new Vector3(0.05f,0.05f,0.05f);
 		}
-		if (Counter == 1 && transform.localScale == new Vector3 (1.0f, 1.0f, 1.0f)) {
-			this.enabled = false;
+		if (Counter == 1 && transform.localScale.x < 0.75f) {
+			Counter++;
+			transform.localScale = new Vector3(0.75f,0.75f,1.0f);
 		}
 	}
 }

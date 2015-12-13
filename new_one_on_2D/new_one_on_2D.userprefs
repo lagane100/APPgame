@@ -1,13 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/weapon_scripts/card_effect.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/change_to_data.cs">
     <Files>
-      <File FileName="Assets/_Script/playerselected.cs" Line="29" Column="66" />
-      <File FileName="Assets/_Script/send_all_select.cs" Line="20" Column="4" />
-      <File FileName="Assets/_Script/trade.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Script/cancel_select_player.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Script/weapon_scripts/card_effect.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Script/test.cs" Line="13" Column="1" />
+      <File FileName="Assets/_Script/change_to_data.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Script/set_sound.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Script/watch_movie_again.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
