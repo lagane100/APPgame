@@ -61,7 +61,6 @@
      <Compile Include="Assets\_Script\battle_start.cs" />
      <Compile Include="Assets\_Script\cancel_select_player.cs" />
      <Compile Include="Assets\_Script\card_selected.cs" />
-     <Compile Include="Assets\_Script\change_to_data.cs" />
      <Compile Include="Assets\_Script\eject_skin_turn.cs" />
      <Compile Include="Assets\_Script\end.cs" />
      <Compile Include="Assets\_Script\go_setting.cs" />
@@ -69,6 +68,7 @@
      <Compile Include="Assets\_Script\main_get_ID.cs" />
      <Compile Include="Assets\_Script\main_get_exp.cs" />
      <Compile Include="Assets\_Script\open_chatting_room.cs" />
+     <Compile Include="Assets\_Script\open_data.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
      <Compile Include="Assets\_Script\playerselected.cs" />
      <Compile Include="Assets\_Script\send_all_select.cs" />
