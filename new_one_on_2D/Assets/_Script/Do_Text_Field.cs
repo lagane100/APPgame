@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Do_Text_Field : MonoBehaviour {
 
-	private string edit_to_enter = "Enter your name(English only)";
-	private string edit_to_send = "Press to continue";
+	private string check_nick = "Enter your name(English only)";
+	//private string edit_to_send = "Press to continue";
 	private WWW register_data;
 	public GameObject loading_prefab;
 	public string login_success_level;
@@ -21,16 +21,16 @@ public class Do_Text_Field : MonoBehaviour {
 
 	// Set textfield GUI
 	void OnGUI(){
-		edit_to_enter = GUI.TextField (new Rect (Screen.width/4, Screen.height/2 - Screen.height/10, Screen.width/2,Screen.height/15), edit_to_enter, 20);
+		check_nick = GUI.TextField (new Rect (Screen.width/3 - Screen.width/25, Screen.height/2 - Screen.height/25, 5 * Screen.width/12,Screen.height/15), check_nick, 20);
 		GUI.skin.textField.fontSize = 80;
 
-		if (GUI.Button (new Rect (Screen.width * 3 / 8, Screen.height / 2, Screen.width / 4, Screen.height / 16), edit_to_send)) {
-			StartCoroutine(register_new(edit_to_enter));
-		}
+		/*if (GUI.Button (new Rect (Screen.width * 3 / 8, Screen.height / 2, Screen.width / 4, Screen.height / 16), edit_to_send)) {
+			StartCoroutine(register_new(check_nick));
+		}*/
 		GUI.skin.button.fontSize = 40;
 	}
 
-	public IEnumerator register_new(string check_nick){
+	public IEnumerator register_new(){
 		Instantiate (loading_prefab, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 		string temp = check_nick;
 		check_nick.Replace ("'", string.Empty);
@@ -38,7 +38,7 @@ public class Do_Text_Field : MonoBehaviour {
 		check_nick.Replace (">", string.Empty);
 		check_nick.Replace ("-", string.Empty);
 		if (!temp.Equals (check_nick)) {
-			edit_to_enter = "Error message";
+			check_nick = "Error message";
 		}
 		WWWForm form = new WWWForm ();
 		form.AddField("android_ID",PlayerPrefs.GetString("android_ID"));

@@ -69,13 +69,14 @@
      <Compile Include="Assets\_Script\login_background_moving.cs" />
      <Compile Include="Assets\_Script\main_get_ID.cs" />
      <Compile Include="Assets\_Script\main_get_exp.cs" />
+     <Compile Include="Assets\_Script\move_sound_and_music.cs" />
      <Compile Include="Assets\_Script\open_chatting_room.cs" />
      <Compile Include="Assets\_Script\open_data.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
      <Compile Include="Assets\_Script\playerselected.cs" />
      <Compile Include="Assets\_Script\send_all_select.cs" />
+     <Compile Include="Assets\_Script\send_nickname.cs" />
      <Compile Include="Assets\_Script\set_button_unclicked.cs" />
-     <Compile Include="Assets\_Script\set_sound.cs" />
      <Compile Include="Assets\_Script\test.cs" />
      <Compile Include="Assets\_Script\trade.cs" />
      <Compile Include="Assets\_Script\victory.cs" />
