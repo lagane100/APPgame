@@ -10,6 +10,6 @@ public class single_glass : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }

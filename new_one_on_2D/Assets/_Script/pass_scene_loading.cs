@@ -24,17 +24,18 @@ public class pass_scene_loading : MonoBehaviour {
 
 	// Display the loading screen while the scene is changing
 	public IEnumerator DisplayLoadingScreen(string level){
-		loading_bar.transform.localScale = new Vector3 (loadProgress, loading_bar.transform.position.y, loading_bar.transform.position.z);
+		//loading_bar.transform.localScale = new Vector3 (loadProgress, loading_bar.transform.position.y, loading_bar.transform.position.z);
 
 		text.SetActive (true);
 		TextMesh textObject = GameObject.Find ("text").GetComponent<TextMesh> ();
+		textObject.GetComponent<Renderer> ().sortingOrder = 21;
 		textObject.text = "Now Loading " + loadProgress + "%";
 
 		AsyncOperation async = Application.LoadLevelAsync (level);
 		while (!async.isDone) {
 			loadProgress = (int)(async.progress * 100);
 			textObject.text = "Now Loading " + loadProgress + "%"; 
-			loading_bar.transform.localScale = new Vector3 (async.progress, loading_bar.transform.position.y, loading_bar.transform.position.z);
+			//loading_bar.transform.localScale = new Vector3 (async.progress, loading_bar.transform.position.y, loading_bar.transform.position.z);
 			yield return null;
 		}
 	}
