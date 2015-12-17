@@ -1,13 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/add_to_room.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/chatting_room.cs">
     <Files>
-      <File FileName="Assets/_Script/let_mesh_float.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Script/join_room.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Script/create_room.cs" Line="48" Column="39" />
-      <File FileName="Assets/_Script/get_room.cs" Line="6" Column="25" />
-      <File FileName="Assets/_Script/refresh_room.cs" Line="20" Column="114" />
-      <File FileName="Assets/_Script/add_to_room.cs" Line="17" Column="35" />
+      <File FileName="Assets/_Script/player_in_room.cs" Line="62" Column="14" />
+      <File FileName="Assets/_Script/pass_scene_loading.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Script/change_to_start_and_start.cs" Line="18" Column="5" />
+      <File FileName="Assets/_Script/chatting_room.cs" Line="20" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

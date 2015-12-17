@@ -6,6 +6,7 @@ public class Do_Text_Field : MonoBehaviour {
 	private string check_nick = "Enter your name(English only)";
 	//private string edit_to_send = "Press to continue";
 	private WWW register_data;
+	private WWW UID_data;
 	public GameObject loading_prefab;
 	public string login_success_level;
 
@@ -48,8 +49,9 @@ public class Do_Text_Field : MonoBehaviour {
 		yield return register_data;
 		if (register_data.text.Equals ("Success")) {
 			PlayerPrefs.SetInt("EXP",0);
-			PlayerPrefs.SetInt("level",0);
+			PlayerPrefs.SetInt("level",1);
 			PlayerPrefs.SetString("nickname",check_nick);
+			yield return StartCoroutine (getUID());
 			yield return StartCoroutine (start_change_scene_to_main ());
 		}
 	}
@@ -63,5 +65,12 @@ public class Do_Text_Field : MonoBehaviour {
 			PlayerPrefs.SetInt("call_loading",1);
 			yield break;
 		}
+	}
+
+	public IEnumerator getUID(){
+		WWWForm ID = new WWWForm ();
+		ID.AddField ("android_ID", PlayerPrefs.GetString ("android_ID"));
+		UID_data = new WWW ("http://128.199.83.67/APPgame/backside/php/getUID.php", ID);
+		yield return UID_data;
 	}
 }

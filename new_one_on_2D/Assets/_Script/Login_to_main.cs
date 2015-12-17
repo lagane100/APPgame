@@ -86,6 +86,7 @@ public class Login_to_main : MonoBehaviour {
 			IDictionary<string,object> results = (IDictionary<string,object>)Json.Deserialize(login_data.text);
 			WWWForm form = new WWWForm();
 			form.AddField("UID", int.Parse(results["UID"].ToString()));
+			PlayerPrefs.SetInt("UID", int.Parse(results["UID"].ToString()));
 			WWW user_data = new WWW("http://128.199.83.67/APPgame/backside/php/getleveldata.php",form);
 			yield return user_data;
 			IDictionary<string,object> data = (IDictionary<string,object>)Json.Deserialize(user_data.text);

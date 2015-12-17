@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class change_to_start_and_start : MonoBehaviour {
-	public Sprite start_button;
+	public Sprite ready;
 	public string battle_level;
 
 	// Use this for initialization
@@ -13,8 +13,9 @@ public class change_to_start_and_start : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (PhotonNetwork.room != null) {
+			Debug.Log(PhotonNetwork.room.playerCount);
 			if (PhotonNetwork.room.playerCount > 4) {
-				gameObject.GetComponent<SpriteRenderer> ().sprite = start_button;
+				gameObject.GetComponent<SpriteRenderer> ().sprite = ready;
 			}
 		}
 		if (GameObject.FindGameObjectWithTag ("load screen")) {

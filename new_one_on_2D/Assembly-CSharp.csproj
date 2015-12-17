@@ -128,6 +128,7 @@
      <Compile Include="Assets\_Script\draw_card_from_deck.cs" />
      <Compile Include="Assets\_Script\eject_skin_turn.cs" />
      <Compile Include="Assets\_Script\end.cs" />
+     <Compile Include="Assets\_Script\get_data.cs" />
      <Compile Include="Assets\_Script\get_room.cs" />
      <Compile Include="Assets\_Script\go_setting.cs" />
      <Compile Include="Assets\_Script\join_room.cs" />
@@ -140,6 +141,7 @@
      <Compile Include="Assets\_Script\open_chatting_room.cs" />
      <Compile Include="Assets\_Script\open_data.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
+     <Compile Include="Assets\_Script\player_in_room.cs" />
      <Compile Include="Assets\_Script\playerselected.cs" />
      <Compile Include="Assets\_Script\refresh_room.cs" />
      <Compile Include="Assets\_Script\send_all_select.cs" />
@@ -173,11 +175,17 @@
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
  <HintPath>/Users/lagane100/appGames/the_castle_of_the_devil/APPgame/new_one_on_2D/Assets/Plugins/Photon3Unity3D.dll</HintPath>
