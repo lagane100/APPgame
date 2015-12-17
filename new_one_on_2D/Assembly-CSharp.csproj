@@ -114,6 +114,7 @@
      <Compile Include="Assets\_Script\Play_movie_renew.cs" />
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
      <Compile Include="Assets\_Script\accept_skip_turn.cs" />
+     <Compile Include="Assets\_Script\add_to_room.cs" />
      <Compile Include="Assets\_Script\ask_nickname_script.cs" />
      <Compile Include="Assets\_Script\attack.cs" />
      <Compile Include="Assets\_Script\back_to_main.cs" />
@@ -121,10 +122,16 @@
      <Compile Include="Assets\_Script\cancel_select_player.cs" />
      <Compile Include="Assets\_Script\card_selected.cs" />
      <Compile Include="Assets\_Script\change_to_data.cs" />
+     <Compile Include="Assets\_Script\change_to_start_and_start.cs" />
+     <Compile Include="Assets\_Script\chatting_room.cs" />
+     <Compile Include="Assets\_Script\create_room.cs" />
      <Compile Include="Assets\_Script\draw_card_from_deck.cs" />
      <Compile Include="Assets\_Script\eject_skin_turn.cs" />
      <Compile Include="Assets\_Script\end.cs" />
+     <Compile Include="Assets\_Script\get_room.cs" />
      <Compile Include="Assets\_Script\go_setting.cs" />
+     <Compile Include="Assets\_Script\join_room.cs" />
+     <Compile Include="Assets\_Script\leave_room.cs" />
      <Compile Include="Assets\_Script\let_mesh_float.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
      <Compile Include="Assets\_Script\main_get_ID.cs" />
@@ -134,6 +141,7 @@
      <Compile Include="Assets\_Script\open_data.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
      <Compile Include="Assets\_Script\playerselected.cs" />
+     <Compile Include="Assets\_Script\refresh_room.cs" />
      <Compile Include="Assets\_Script\send_all_select.cs" />
      <Compile Include="Assets\_Script\send_nickname.cs" />
      <Compile Include="Assets\_Script\set_button_unclicked.cs" />
