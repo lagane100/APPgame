@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(PhotonView))]
 public class InRoomChat : Photon.MonoBehaviour 
 {
-    public Rect GuiRect = new Rect(0,0, 250,300);
+    public Rect GuiRect = new Rect(0,0, 2500,3000);
     public bool IsVisible = true;
     public bool AlignBottom = false;
     public List<string> messages = new List<string>();
@@ -49,7 +49,7 @@ public class InRoomChat : Photon.MonoBehaviour
 
         scrollPos = GUILayout.BeginScrollView(scrollPos);
         GUILayout.FlexibleSpace();
-        for (int i = messages.Count - 1; i >= 0; i--)
+        for (int i = 0; i < messages.Count; i++)
         {
             GUILayout.Label(messages[i]);
         }

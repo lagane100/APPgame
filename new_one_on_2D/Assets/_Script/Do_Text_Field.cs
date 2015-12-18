@@ -47,11 +47,12 @@ public class Do_Text_Field : MonoBehaviour {
 		form.AddField ("nickname", check_nick);
 		register_data = new WWW ("http://128.199.83.67/APPgame/backside/php/register.php",form);
 		yield return register_data;
+		Debug.Log (register_data.error);
 		if (register_data.text.Equals ("Success")) {
 			PlayerPrefs.SetInt("EXP",0);
 			PlayerPrefs.SetInt("level",1);
 			PlayerPrefs.SetString("nickname",check_nick);
-			yield return StartCoroutine (getUID());
+			//yield return StartCoroutine (getUID());
 			yield return StartCoroutine (start_change_scene_to_main ());
 		}
 	}

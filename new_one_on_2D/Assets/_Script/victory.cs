@@ -23,7 +23,7 @@ public class victory : MonoBehaviour {
 	}
 
 	void OnTouchDown(){
-//		t.text = "test";
-		PlayerPrefs.SetInt ("have_dark_jewel", 1);
+		PhotonNetwork.Instantiate ("wait_for_victory", new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion (), 0);
+		Destroy (GameObject.Find ("wait_for_victory"));
 	}
 }

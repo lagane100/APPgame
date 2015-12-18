@@ -122,9 +122,11 @@
      <Compile Include="Assets\_Script\cancel_select_player.cs" />
      <Compile Include="Assets\_Script\card_selected.cs" />
      <Compile Include="Assets\_Script\change_to_data.cs" />
+     <Compile Include="Assets\_Script\change_to_empty.cs" />
      <Compile Include="Assets\_Script\change_to_start_and_start.cs" />
      <Compile Include="Assets\_Script\chatting_room.cs" />
      <Compile Include="Assets\_Script\create_room.cs" />
+     <Compile Include="Assets\_Script\deck_manage.cs" />
      <Compile Include="Assets\_Script\draw_card_from_deck.cs" />
      <Compile Include="Assets\_Script\eject_skin_turn.cs" />
      <Compile Include="Assets\_Script\end.cs" />
@@ -133,6 +135,7 @@
      <Compile Include="Assets\_Script\go_setting.cs" />
      <Compile Include="Assets\_Script\join_room.cs" />
      <Compile Include="Assets\_Script\leave_room.cs" />
+     <Compile Include="Assets\_Script\let_background_stay.cs" />
      <Compile Include="Assets\_Script\let_mesh_float.cs" />
      <Compile Include="Assets\_Script\login_background_moving.cs" />
      <Compile Include="Assets\_Script\main_get_ID.cs" />
@@ -149,6 +152,7 @@
      <Compile Include="Assets\_Script\set_button_unclicked.cs" />
      <Compile Include="Assets\_Script\set_hands_place.cs" />
      <Compile Include="Assets\_Script\spin_card.cs" />
+     <Compile Include="Assets\_Script\start_battle.cs" />
      <Compile Include="Assets\_Script\test.cs" />
      <Compile Include="Assets\_Script\trade.cs" />
      <Compile Include="Assets\_Script\victory.cs" />
@@ -175,17 +179,11 @@
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
  <HintPath>/Users/lagane100/appGames/the_castle_of_the_devil/APPgame/new_one_on_2D/Assets/Plugins/Photon3Unity3D.dll</HintPath>
