@@ -21,12 +21,12 @@ public class playerselected : MonoBehaviour {
 	IEnumerator OnTouchDown(){
 		if (gameObject.GetComponent<SpriteRenderer> ().color == origin_color) {
 			gameObject.GetComponent<SpriteRenderer> ().color = selected_color;
-			GameObject.FindGameObjectWithTag ("enter").SendMessage ("UpdateSelected",gameObject, SendMessageOptions.RequireReceiver);
+			GameObject.FindGameObjectWithTag ("enter").SendMessage ("UpdateSelected",gameObject, SendMessageOptions.DontRequireReceiver);
 			yield break;
 		}
 		if (gameObject.GetComponent<SpriteRenderer> ().color == selected_color) {
 			gameObject.GetComponent<SpriteRenderer> ().color = origin_color;
-			GameObject.FindGameObjectWithTag ("enter").SendMessage ("Clear",gameObject, SendMessageOptions.RequireReceiver);
+			GameObject.FindGameObjectWithTag ("enter").SendMessage ("Clear",gameObject, SendMessageOptions.DontRequireReceiver);
 			yield break;
 		}
 	}

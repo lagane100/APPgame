@@ -31,6 +31,12 @@ public class send_all_select : MonoBehaviour {
 		Debug.Log (selected_player);
 	}
 
+	void OnTouchDown(){
+		if (PlayerPrefs.GetString ("action").Equals ("trade")) {
+			PhotonNetwork.Instantiate("wait_for_others", new Vector3(0.0f,0.0f,0.0f),new Quaternion(),0);
+		}
+	}
+
 	void CheckSelected(){
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player")) {
 			if(selected_player != null){

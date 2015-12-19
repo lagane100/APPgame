@@ -17,6 +17,7 @@ public class trade : MonoBehaviour {
 
 	// start trading
 	void OnTouchDown(){
+		PlayerPrefs.SetString("action","trade");
 		Instantiate (select_player, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 	}
 }

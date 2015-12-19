@@ -18,6 +18,7 @@ public class start_battle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log (PlayerPrefs.GetInt("playerNO"));
 		player1 = GameObject.FindGameObjectWithTag ("player1");
 		player1.SetActive (false);
 		players [0] = player1;

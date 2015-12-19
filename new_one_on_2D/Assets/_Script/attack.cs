@@ -16,7 +16,7 @@ public class attack : MonoBehaviour {
 	}
 
 	void OnTouchDown(){
-		PlayerPrefs.SetInt ("have_dark_jewel", 0);
+		PlayerPrefs.SetString("action","attack");
 		Instantiate (select_player, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
 	}
 }
