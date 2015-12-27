@@ -107,12 +107,14 @@
      <Compile Include="Assets\_Plugins\MiniJSON.cs" />
      <Compile Include="Assets\_Script\Camera_touchInput.cs" />
      <Compile Include="Assets\_Script\Do_Text_Field.cs" />
+     <Compile Include="Assets\_Script\EZCloudClient.cs" />
      <Compile Include="Assets\_Script\Login_to_main.cs" />
      <Compile Include="Assets\_Script\Login_word_shining.cs" />
      <Compile Include="Assets\_Script\Main_get_level.cs" />
      <Compile Include="Assets\_Script\Play_movie.cs" />
      <Compile Include="Assets\_Script\Play_movie_renew.cs" />
      <Compile Include="Assets\_Script\Server_reconnect.cs" />
+     <Compile Include="Assets\_Script\Set_turn.cs" />
      <Compile Include="Assets\_Script\accept_skip_turn.cs" />
      <Compile Include="Assets\_Script\add_to_room.cs" />
      <Compile Include="Assets\_Script\ask_nickname_script.cs" />
@@ -146,6 +148,7 @@
      <Compile Include="Assets\_Script\open_chatting_room.cs" />
      <Compile Include="Assets\_Script\open_data.cs" />
      <Compile Include="Assets\_Script\pass_scene_loading.cs" />
+     <Compile Include="Assets\_Script\photon_pass_screen.cs" />
      <Compile Include="Assets\_Script\player_in_room.cs" />
      <Compile Include="Assets\_Script\playerselected.cs" />
      <Compile Include="Assets\_Script\refresh_room.cs" />
@@ -154,10 +157,10 @@
      <Compile Include="Assets\_Script\send_nickname.cs" />
      <Compile Include="Assets\_Script\set_button_unclicked.cs" />
      <Compile Include="Assets\_Script\set_hands_place.cs" />
+     <Compile Include="Assets\_Script\set_using.cs" />
      <Compile Include="Assets\_Script\show_who.cs" />
      <Compile Include="Assets\_Script\spin_card.cs" />
      <Compile Include="Assets\_Script\start_battle.cs" />
-     <Compile Include="Assets\_Script\test.cs" />
      <Compile Include="Assets\_Script\trade.cs" />
      <Compile Include="Assets\_Script\victory.cs" />
      <Compile Include="Assets\_Script\victory_check.cs" />

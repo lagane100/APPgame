@@ -17,15 +17,11 @@ public class show_who : MonoBehaviour {
 	}
 
 	void OnTouchDown(){
-		for(int i = 0; i < PhotonNetwork.playerList.Length; i++){
-			if(PhotonNetwork.playerList[i].name.Equals(PlayerPrefs.GetString("nickname"))){
-				if(i%2 == 1){
-					Instantiate(red, new Vector3(0.0f,0.0f,0.0f), new Quaternion());
-				}
-				else{
-					Instantiate(blue,new Vector3(0.0f,0.0f,0.0f), new Quaternion());
-				}
-			}
+		if (PlayerPrefs.GetString ("states").Equals ("red")) {
+			Instantiate(red,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
+		}
+		if (PlayerPrefs.GetString ("states").Equals ("blue")) {
+			Instantiate(blue,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
 		}
 	}
 }

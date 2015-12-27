@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class start_battle : MonoBehaviour {
+public class start_battle : Photon.MonoBehaviour {
 
 	private GameObject player1;
 	private GameObject player2;
@@ -58,10 +58,22 @@ public class start_battle : MonoBehaviour {
 				Destroy(players[i]);
 			}
 		}
+
+		for(int i = 0; i<PhotonNetwork.playerList.Length;i++){
+			if(PhotonNetwork.playerList[i].name.Equals(PlayerPrefs.GetString("nickname"))){
+				photonView.RPC("setName",PhotonTargets.All, i, PlayerPrefs.GetString("nickname"));
+			}
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	[PunRPC]
+	public void setName(int i, string name){
+		players [i].name = name;
+		Debug.Log (name);
 	}
 }

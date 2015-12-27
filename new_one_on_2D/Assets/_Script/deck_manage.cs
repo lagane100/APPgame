@@ -1,8 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
-using Random = UnityEngine.Random;
 
-public class deck_manage : MonoBehaviour {
+public class deck_manage : Photon.MonoBehaviour {
 
 	private GameObject item1;
 	private GameObject item2;
@@ -99,6 +98,7 @@ public class deck_manage : MonoBehaviour {
 				int num = Random.Range(0,20);
 				itemDeck [num].SetActive (true);
 				GameObject.FindGameObjectWithTag (itemDeck [num].name).transform.parent = GameObject.FindGameObjectWithTag ("Cards").transform;
+				photonView.RPC("moveDeck",PhotonTargets.Others, num);
 			}
 		}
 	}
@@ -106,5 +106,12 @@ public class deck_manage : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	[PunRPC]
+	public void moveDeck(int num){
+		Debug.Log (itemDeck[num]);
+		itemDeck [num].SetActive (true);
+		Destroy (GameObject.FindGameObjectWithTag (itemDeck [num].name));
 	}
 }
