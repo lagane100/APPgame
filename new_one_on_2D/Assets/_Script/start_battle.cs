@@ -77,6 +77,7 @@ public class start_battle : Photon.MonoBehaviour {
 		player10.SetActive (false);
 		players [9] = player10;
 
+		//Set for playerNum
 		for (int i = 0; i < 10; i++) {
 			if(PhotonNetwork.playerList.Length > i){
 				players[i].SetActive(true);
@@ -86,11 +87,10 @@ public class start_battle : Photon.MonoBehaviour {
 			}
 		}
 
-		for(int i = 0; i<PhotonNetwork.playerList.Length; i++){
-			if(PhotonNetwork.playerList[i].name.Equals(PlayerPrefs.GetString("nickname"))){
-				photonView.RPC("setNameAndStates",PhotonTargets.All, i, PlayerPrefs.GetString("nickname"));
-			}
-		}
+		//Set the players nickname
+		photonView.RPC("setNameAndStates",PhotonTargets.All, PhotonNetwork.player.ID, PlayerPrefs.GetString("nickname"));
+		
+		//Set the players Jobs
 		while (true) {
 			int randomJob = Random.Range (0, 10);
 			if (job [randomJob] != null) {
@@ -110,7 +110,8 @@ public class start_battle : Photon.MonoBehaviour {
 
 	[PunRPC]
 	public void setNameAndStates(int i, string name){
-		players [i].name = name;
+		Debug.Log (i);
+		players [i - 1].name = name;
 		Debug.Log (name);
 		if (i % 2 == 1) {
 			PlayerPrefs.SetString ("states", "red");

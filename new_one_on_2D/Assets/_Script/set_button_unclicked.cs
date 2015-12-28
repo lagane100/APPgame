@@ -2,15 +2,14 @@
 using System.Collections;
 
 public class set_button_unclicked : MonoBehaviour {
-	private GameObject[] buttons = new GameObject[5];
+	private GameObject[] buttons = new GameObject[4];
 
 	// Start is called once per script
 	void Start(){
-		buttons[0] = GameObject.Find("attack");
-		buttons[1] = GameObject.Find("trade");
-		buttons[2] = GameObject.Find("end");
+		buttons[0] = GameObject.Find ("attack");
+		buttons[1] = GameObject.Find ("trade");
+		buttons[2] = GameObject.Find ("end");
 		buttons[3] = GameObject.Find ("victory");
-		buttons[4] = GameObject.Find ("chatting room");
 	}
 
 	// Update is called once per frame

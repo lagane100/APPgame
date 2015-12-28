@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class show_who : MonoBehaviour {
-
 	public GameObject red;
 	public GameObject blue;
 	private bool counter = true;
@@ -27,10 +26,10 @@ public class show_who : MonoBehaviour {
 
 	void OnTouchDown(){
 		if (PlayerPrefs.GetString ("states").Equals ("red")) {
-			Instantiate(red,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
+			Instantiate(red,new Vector3(2.0f,0.0f,0.0f),new Quaternion());
 		}
 		if (PlayerPrefs.GetString ("states").Equals ("blue")) {
-			Instantiate(blue,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
+			Instantiate(blue,new Vector3(2.0f,0.0f,0.0f),new Quaternion());
 		}
 		counter = !counter;
 	}

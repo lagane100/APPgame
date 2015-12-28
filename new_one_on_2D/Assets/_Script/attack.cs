@@ -15,8 +15,11 @@ public class attack : MonoBehaviour {
 	
 	}
 
+	//start attack
 	void OnTouchDown(){
-		PlayerPrefs.SetString("action","attack");
-		Instantiate (select_player, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ());
+		if (PhotonNetwork.isMasterClient) {
+			GameObject selector = Instantiate (select_player, new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion ()) as GameObject;
+			selector.transform.parent = gameObject.transform;
+		}
 	}
 }

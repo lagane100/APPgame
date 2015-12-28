@@ -19,15 +19,17 @@ public class playerselected : MonoBehaviour {
 
 	// Click to select
 	IEnumerator OnTouchDown(){
-		if (gameObject.GetComponent<SpriteRenderer> ().color == origin_color) {
-			gameObject.GetComponent<SpriteRenderer> ().color = selected_color;
-			GameObject.FindGameObjectWithTag ("enter").SendMessage ("UpdateSelected",gameObject, SendMessageOptions.DontRequireReceiver);
-			yield break;
-		}
-		if (gameObject.GetComponent<SpriteRenderer> ().color == selected_color) {
-			gameObject.GetComponent<SpriteRenderer> ().color = origin_color;
-			GameObject.FindGameObjectWithTag ("enter").SendMessage ("Clear",gameObject, SendMessageOptions.DontRequireReceiver);
-			yield break;
+		if (!transform.parent.transform.FindChild ("nicknameChanged").GetComponent<TextMesh>().text.Equals (PlayerPrefs.GetString ("nickname"))) {
+			if (gameObject.GetComponent<SpriteRenderer> ().color == origin_color) {
+				gameObject.GetComponent<SpriteRenderer> ().color = selected_color;
+				GameObject.FindGameObjectWithTag ("enter").SendMessage ("UpdateSelected", gameObject, SendMessageOptions.DontRequireReceiver);
+				yield break;
+			}
+			if (gameObject.GetComponent<SpriteRenderer> ().color == selected_color) {
+				gameObject.GetComponent<SpriteRenderer> ().color = origin_color;
+				GameObject.FindGameObjectWithTag ("enter").SendMessage ("Clear", gameObject, SendMessageOptions.DontRequireReceiver);
+				yield break;
+			}
 		}
 	}
 }
