@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class get_player_nickname : Photon.MonoBehaviour {
-
-	private string player = "player";
+public class get_player_nickname : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = player + PhotonNetwork.player.ID;
-		if (transform.FindChild (player)) {
-			photonView.viewID = PhotonNetwork.player.ID;
+		foreach (Transform child in transform) {
+			if(child.name != "nicknameChanged"){
+				TextMesh nicknameChange = transform.Find("nicknameChanged").GetComponent<TextMesh>();
+				nicknameChange.text = GameObject.FindGameObjectWithTag(child.name).name;
+			}
 		}
-
-		photonView.RPC ("getNickname", PhotonTargets.All, player);
 	}
 	
 	// Update is called once per frame
@@ -20,7 +18,7 @@ public class get_player_nickname : Photon.MonoBehaviour {
 
 	}
 
-	[PunRPC]
+	/*[PunRPC]
 	public void getNickname(string playerNum){
 		if (transform.FindChild (playerNum)) {
 			Debug.Log(playerNum);
@@ -33,5 +31,5 @@ public class get_player_nickname : Photon.MonoBehaviour {
 		Debug.Log (12345);
 		TextMesh nicknameChange = transform.Find("nicknameChanged").GetComponent<TextMesh>();
 		nicknameChange.text = nickname;
-	}
+	}*/
 }
