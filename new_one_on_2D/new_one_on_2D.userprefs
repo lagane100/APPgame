@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/get_player_nickname.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/send_all_select.cs">
     <Files>
-      <File FileName="Assets/_Script/playerselected.cs" Line="22" Column="94" />
-      <File FileName="Assets/_Script/get_player_nickname.cs" Line="17" Column="2" />
+      <File FileName="Assets/_Script/send_all_select.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Script/attack.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

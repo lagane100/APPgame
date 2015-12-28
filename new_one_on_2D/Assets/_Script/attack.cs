@@ -22,4 +22,8 @@ public class attack : MonoBehaviour {
 			selector.transform.parent = gameObject.transform;
 		}
 	}
+
+	void StartDoStuff(){
+		Debug.Log (12345);
+	}
 }

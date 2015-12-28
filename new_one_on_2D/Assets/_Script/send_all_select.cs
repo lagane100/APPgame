@@ -32,9 +32,8 @@ public class send_all_select : MonoBehaviour {
 	}
 
 	void OnTouchDown(){
-		if (PlayerPrefs.GetString ("action").Equals ("trade")) {
-			PhotonNetwork.Instantiate("wait_for_others", new Vector3(0.0f,0.0f,0.0f),new Quaternion(),0);
-		}
+		Debug.Log (12345555);
+		//gameObject.transform.parent.parent.SendMessage ("StartDoStuff", SendMessageOptions.RequireReceiver);
 	}
 
 	void CheckSelected(){
