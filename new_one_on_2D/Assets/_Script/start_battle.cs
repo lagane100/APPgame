@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class start_battle : Photon.MonoBehaviour {
 
@@ -14,7 +15,33 @@ public class start_battle : Photon.MonoBehaviour {
 	private GameObject player9;
 	private GameObject player10;
 
+	public GameObject diplomat;
+	public GameObject doctor;
+	public GameObject drugmaker;
+	public GameObject duelist;
+	public GameObject grandmaster;
+	public GameObject guard;
+	public GameObject hypnotist;
+	public GameObject priest;
+	public GameObject prophet;
+	public GameObject thugs;
+
+	private List<GameObject> job = new List<GameObject> ();
 	private GameObject[] players = new GameObject[10];
+
+	// start this script when scene is awake
+	void Awake(){
+		job.Add (diplomat);
+		job.Add (doctor);
+		job.Add (drugmaker);
+		job.Add (duelist);
+		job.Add (grandmaster);
+		job.Add (guard);
+		job.Add (hypnotist);
+		job.Add (priest);
+		job.Add (prophet);
+		job.Add (thugs);
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -59,21 +86,41 @@ public class start_battle : Photon.MonoBehaviour {
 			}
 		}
 
-		for(int i = 0; i<PhotonNetwork.playerList.Length;i++){
+		for(int i = 0; i<PhotonNetwork.playerList.Length; i++){
 			if(PhotonNetwork.playerList[i].name.Equals(PlayerPrefs.GetString("nickname"))){
-				photonView.RPC("setName",PhotonTargets.All, i, PlayerPrefs.GetString("nickname"));
+				photonView.RPC("setNameAndStates",PhotonTargets.All, i, PlayerPrefs.GetString("nickname"));
+			}
+		}
+		while (true) {
+			int randomJob = Random.Range (0, 10);
+			if (job [randomJob] != null) {
+				GameObject newJob = Instantiate(job[randomJob], new Vector3(0.0f,0.0f,0.0f), new Quaternion()) as GameObject;
+				newJob.transform.parent = GameObject.Find("hint").transform;
+				photonView.RPC ("setJob", PhotonTargets.All, randomJob);
+				Debug.Log(randomJob);
+				break;
 			}
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	[PunRPC]
-	public void setName(int i, string name){
+	public void setNameAndStates(int i, string name){
 		players [i].name = name;
 		Debug.Log (name);
+		if (i % 2 == 1) {
+			PlayerPrefs.SetString ("states", "red");
+		} else {
+			PlayerPrefs.SetString ("states", "blue");
+		}
+	}
+
+	[PunRPC]
+	public void setJob(int jobCount){
+		job.RemoveAt (jobCount);
 	}
 }

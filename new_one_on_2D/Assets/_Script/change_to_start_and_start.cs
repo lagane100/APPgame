@@ -28,7 +28,7 @@ public class change_to_start_and_start : Photon.MonoBehaviour {
 		if (PhotonNetwork.room != null) {
 			if (PhotonNetwork.room.playerCount < 4) {
 				PhotonNetwork.Instantiate ("loading_screen", new Vector3 (0.0f, 0.0f, 0.0f), new Quaternion (), 0);
-				photonView.RPC("destroyBackground",PhotonTargets.Others,null);
+				photonView.RPC("destroyBackground",PhotonTargets.All,null);
 			}
 		}
 	}

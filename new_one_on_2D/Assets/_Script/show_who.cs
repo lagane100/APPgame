@@ -5,6 +5,7 @@ public class show_who : MonoBehaviour {
 
 	public GameObject red;
 	public GameObject blue;
+	private bool counter = true;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +14,15 @@ public class show_who : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (counter) {
+			foreach (Transform child in transform) {
+				child.gameObject.SetActive (false);
+			}
+		} else{
+			foreach(Transform child in transform){
+				child.gameObject.SetActive(true);
+			}
+		}
 	}
 
 	void OnTouchDown(){
@@ -23,5 +32,6 @@ public class show_who : MonoBehaviour {
 		if (PlayerPrefs.GetString ("states").Equals ("blue")) {
 			Instantiate(blue,new Vector3(0.0f,0.0f,0.0f),new Quaternion());
 		}
+		counter = !counter;
 	}
 }

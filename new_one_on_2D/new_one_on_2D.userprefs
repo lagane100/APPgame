@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/start_battle.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Script/show_who.cs">
     <Files>
-      <File FileName="Assets/_Script/set_button_unclicked.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Script/set_using.cs" Line="24" Column="50" />
-      <File FileName="Assets/_Script/start_battle.cs" Line="77" Column="20" />
-      <File FileName="Assets/_Script/show_who.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Script/start_battle.cs" Line="108" Column="3" />
+      <File FileName="Assets/_Script/show_who.cs" Line="17" Column="38" />
+      <File FileName="Assets/_Script/deck_manage.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
